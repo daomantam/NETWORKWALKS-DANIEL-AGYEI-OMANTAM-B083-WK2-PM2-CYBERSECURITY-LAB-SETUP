@@ -196,3 +196,10 @@ The screenshot below document the directory listings identified during the recon
 The exercise demonstrated that search engines can index directory listings that expose information about files and resources hosted on web servers.
 The filenames and directory structures provided useful information about the type of material available without requiring the use of specialized vulnerability-scanning tools.
 No attempt was made to bypass authentication or access restricted resources. 
+
+## Conclusion
+
+This project provided practical experience with footprinting and reconnaissance using the Google Hacking Database and Google dorks.
+The exercises demonstrated how search engines can index web resources based on specific patterns, including URL structures, page titles, and file types.
+The project also reinforced an important cybersecurity principle: **the fact that a resource is publicly accessible does not necessarily mean that a person is authorized to interact with it.**
+Using controlled environments and clearly defined authorization boundaries is therefore essential when practicing reconnaissance techniques.
