@@ -97,15 +97,102 @@ GHDB Dorks Used
 
 The following camera-related search patterns were reproduced in the authorized laboratory:
 
-No.|	Dork / Search Pattern	|Local Test Path
-|-|-|
-1	| inurl:"view.shtml" "Network Camera"	| /view.shtml/
-2	|intitle:"EvoCam" inurl:"webcam.html"	|/webcam.html/
-3	|intitle:"Live View / - AXIS"	|/axis/
-4	|intitle:"LiveView / - AXIS"  inurl:view/view.shtml |	/liveview/
-5	|inurl:indexFrame.shtml "Axis Video Server"	| /indexFrame.shtml/
-6	|inurl:axis-cgi/jpg |	/axis-cgi/jpg/
-7	|inurl:"MultiCameraFrame?Mode=Motion" |	/MultiCameraFrame/
-8	|inurl:/view.shtml	| /view/
-9	|inurl:/view/index.shtml	| /view/index.shtml
-10|	"my webcamXP server!"  |	/webcamXP/
+|No.|	Dork / Search Pattern	|Local Test Path|
+|---|---|---|
+|1	| inurl:"view.shtml" "Network Camera"	| /view.shtml/ |
+|2	|intitle:"EvoCam" inurl:"webcam.html"	| /webcam.html/ |
+|3	|intitle:"Live View / - AXIS"	| /axis/ |
+|4	|intitle:"LiveView / - AXIS"  inurl:view/view.shtml |	/liveview/ |
+|5	|inurl:indexFrame.shtml "Axis Video Server"	| /indexFrame.shtml/ |
+|6	|inurl:axis-cgi/jpg |	/axis-cgi/jpg/ |
+|7	|inurl:"MultiCameraFrame?Mode=Motion" |	/MultiCameraFrame/ |
+|8	| inurl:/view.shtml	| /view/
+|9	| inurl:/view/index.shtml	| /view/index.shtml |
+|10 |	"my webcamXP server!"  |	/webcamXP/ |
+
+
+## Results
+
+All ten paths were successfully reproduced within the local laboratory environment.
+
+The tests demonstrated how recognizable URL patterns and page structures can be associated with different camera-server technologies.
+
+No third-party camera systems were accessed during this exercise.
+
+## Evidence
+
+Screenshots from the controlled Kali Linux laboratory are included below.
+
+<img width="1920" height="964" alt="image" src="https://github.com/user-attachments/assets/909f2487-6cd5-45f0-92b6-adc4d99f9f7d" />
+
+<img width="1920" height="964" alt="image" src="https://github.com/user-attachments/assets/8ca6ca1f-77c0-419f-944a-776c80f1b568" />
+
+<img width="1920" height="964" alt="image" src="https://github.com/user-attachments/assets/da0f0803-fa26-4ae7-937c-90733f4a51d4" />
+
+<img width="1920" height="964" alt="image" src="https://github.com/user-attachments/assets/58d5b3f0-58bc-4cb4-bf06-fe55b6846718" />
+
+<img width="1920" height="964" alt="image" src="https://github.com/user-attachments/assets/8c6cff46-317d-4854-95f3-916826622c11" />
+
+<img width="1920" height="964" alt="image" src="https://github.com/user-attachments/assets/598fc0b4-1c49-4504-8ba2-f43e71386d3d" />
+
+<img width="1920" height="964" alt="image" src="https://github.com/user-attachments/assets/66e54a53-c3da-4e79-af94-6a746eb31269" />
+
+
+---
+
+## Task 2 – Mathematics PDF Reconnaissance
+
+### Objective
+
+The objective of this task was to use Google dorking techniques to identify publicly indexed directories containing mathematics-related PDF resources.
+
+The search focused on directory listings that could be discovered through the following query:
+
+```text
+intitle:index.of "parent directory" mathematics pdf
+```
+Methodology
+
+The following procedure was used:
+
+1. Open Google.
+2. Enter the specified GHDB search query.
+3. Examine the returned directory listings.
+4. Open relevant directories.
+5. Check the available files and identify mathematics-related PDF resources.
+6. Record the directory URL and the search query used.
+7. Exclude directories that did not contain relevant mathematics resources.
+
+```text
+intitle:index.of "parent directory" mathematics pdf
+```
+
+Results
+
+The following publicly indexed directories were identified during the reconnaissance exercise:
+
+| No. | Directory / Link                                                               | Relevant Dork                                         | Username / Password |
+| --- | ------------------------------------------------------------------------------ | ----------------------------------------------------- | ------------------- |
+| 1   | `http://erewhon.superkuh.com/library/Math/`                                    | `intitle:index.of "parent directory" mathematics pdf` | N/A                 |
+| 2   | `https://justmathbg.info/files/`                                               | `intitle:index.of "parent directory" mathematics pdf` | N/A                 |
+| 3   | `https://math.dartmouth.edu/~carlp/PDF/`                                       | `intitle:index.of "parent directory" mathematics pdf` | N/A                 |
+| 4   | `/sl/vol2/Mathematics/Math.Encyclopedia/Pdf`                                   | `intitle:index.of "parent directory" mathematics pdf` | N/A                 |
+| 5   | `https://www.math.utah.edu/~cherk/teach/5740MathModeling/12mathmodel/sources/` | `intitle:index.of "parent directory" mathematics pdf` | N/A                 |
+| 6   | `https://www.learn-fo.com/FYUG%20mathematics%20solutions/`                     | `intitle:index.of "parent directory" mathematics pdf` | N/A                 |
+| 7   | `/~dobelman/notes_papers/math`                                                 | `intitle:index.of "parent directory" mathematics pdf` | N/A                 |
+| 8   | `https://secure.math.ubc.ca/Links/Putnam/`                                     | `intitle:index.of "parent directory" mathematics pdf` | N/A                 |
+| 9   | `https://math.uchicago.edu/~shmuel/lg-readings/`                               | `intitle:index.of "parent directory" mathematics pdf` | N/A                 |
+| 10  | `/pdf/projectLearningTree`                                                     | `intitle:index.of "parent directory" mathematics pdf` | N/A                 |
+
+## Task 2 – Evidence
+
+The screenshot below document the directory listings identified during the reconnaissance exercise.
+
+<img width="1920" height="964" alt="image" src="https://github.com/user-attachments/assets/6895e6e3-cd02-4370-9409-e38a7343c249" />
+
+
+## Observations
+
+The exercise demonstrated that search engines can index directory listings that expose information about files and resources hosted on web servers.
+The filenames and directory structures provided useful information about the type of material available without requiring the use of specialized vulnerability-scanning tools.
+No attempt was made to bypass authentication or access restricted resources. 
